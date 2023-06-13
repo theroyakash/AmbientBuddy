@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AmbientBuddy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .button {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                font-family: 'Space Grotesk', sans-serif;
+                background-color: rgb(72,72,74);
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Click play to go down a good path</h1>
+        <audio id="gta5Audio" src="./audio/gta5pause.mp3" preload="auto"></audio>
+        <button id="gta5button" onClick="togglePlay()">Click here to hear.</button>
+    </main>
+
+
+    <script src="render.js"></script>
+</body>
+
+</html>
