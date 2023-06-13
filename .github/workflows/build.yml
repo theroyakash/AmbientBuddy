@@ -17,7 +17,7 @@ jobs:
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 20
 
       - name: Build Application
         run: npm install && npm run package
