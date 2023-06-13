@@ -22,8 +22,8 @@ jobs:
       - name: Build Application
         run: npm install && npm run package
 
-      - name: ZIP the build
-        run: zip --junk-paths AmbientBuddy out
+      - name: Zip the build
+        run: zip -r AmbientBuddy out
       
       - name: Create Release
         id: create_release
