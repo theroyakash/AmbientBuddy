@@ -19,3 +19,37 @@ gta5Audio.onplaying = function () {
 gta5Audio.onpause = function () {
     isPlaying = false;
 };
+
+let volume = document.querySelector("#volume-control");
+volume.addEventListener("change", function (event) {
+    gta5Audio.volume = event.currentTarget.value / 100;
+});
+
+
+// Abusive audio
+var abusiveAudio = document.getElementById("abusive-audio");
+var abusiveAudio_isPlaying = false;
+
+abusiveAudioButton = document.getElementById("abusive-audio-button");
+
+function abusiveAudioTogglePlay() {
+    if (abusiveAudio_isPlaying) {
+        abusiveAudio.pause();
+        abusiveAudioButton.innerHTML = "Start Playing";
+    } else {
+        abusiveAudio.play();
+        abusiveAudioButton.innerHTML = "Stop Playing";
+    }
+};
+
+abusiveAudio.onplaying = function () {
+    abusiveAudio_isPlaying = true;
+};
+abusiveAudio.onpause = function () {
+    abusiveAudio_isPlaying = false;
+};
+
+let abusivevolume = document.querySelector("#volume-control-abusive");
+abusivevolume.addEventListener("change", function (event) {
+    abusiveAudio.volume = event.currentTarget.value / 100;
+});

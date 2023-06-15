@@ -6,33 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AmbientBuddy</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: whitesmoke;
-            color: black;
-        }
-
-        .button {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                font-family: 'Space Grotesk', sans-serif;
-                background-color: rgb(72,72,74);
-                color: white;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="./fonts/fontsheet.css">
 </head>
 
 <body>
     <main>
-        <h1>Click play to go down a good path</h1>
-        <audio id="gta5Audio" src="./audio/gta5pause.mp3" preload="auto"></audio>
-        <button id="gta5button" onClick="togglePlay()">Click here to hear.</button>
+
+        <section class="p14">
+            <h1 style="font-weight: bold;" class="text-7xl text-gray-600">AmbientBuddy</h1>
+        </section>
+
+        <section class="text-gray-600 body-font p4">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+                    <p style="font-family: 'Recoleta'; font-weight: normal;">GTA5 Background Music</p>
+                    <audio id="gta5Audio" src="./audio/gta5pause.mp3" preload="auto"></audio>
+                    <input min = "1" max="100" value="69" class="slider" type="range" id="volume-control"></input>
+                    <button
+                        class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0"
+                        id="gta5button" onClick="togglePlay()">Click here to hear.</button>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr>
+
+        <div>
+            <p style="font-family: 'Recoleta'; font-weight: normal;">Dhoni Abusive Audio</p>
+            <audio id="abusive-audio" src="./audio/abusiverecording.mp3" loop preload="auto"></audio>
+            <input class="slider" type="range" id="volume-control-abusive"></input>
+            <button id="abusive-audio-button" onClick="abusiveAudioTogglePlay()">Play</button>
+        </div>
+
     </main>
 
 
