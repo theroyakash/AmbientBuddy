@@ -1,4 +1,19 @@
 @font-face {
+    font-family: 'Regards';
+    src: url('Regards.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amarillo';
+    src: url('Amarillo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Recoleta Alt';
     src: url('RecoletaAlt-Thin.eot');
     src: local('Recoleta Alt Thin'), local('RecoletaAlt-Thin'),
