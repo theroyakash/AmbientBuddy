@@ -62,10 +62,6 @@ function audioTogglePlay(id) {
     var audio = document.getElementById(id + "_audio");
     var audio_button = document.getElementById(id + "_audio_button");
     
-    if (!audioStateStore.has(id + "_audioIsPlaying")) {
-        audioStateStore[id + "_audioIsPlaying"] = false;
-    }
-
     var audio_state = audioStateStore[id + "_audioIsPlaying"];
 
     if (audio_state) {
@@ -84,14 +80,14 @@ function audioTogglePlay(id) {
         audioStateStore[id + "_audioIsPlaying"] = false;
     };
 
-    let volume_service = document.querySelector("#" + id + "_volume_control");
-    console.log(volume_service);
-    
-    setupVolumeControlEventListener(audio, volume_service);
+    let volume_service = document.querySelector("#" + id + "_volume_control");    
+    volume_service.addEventListener("change", function (event) {
+        audio.volume = event.currentTarget.value / 100;
+    });
 };
 
 function setupVolumeControlEventListener(audio, volume_service) {
     volume_service.addEventListener("change", function (event) {
-        audio.volume = event.currentTarget.value / 100;
+        audio.volume = event.currentTarget.value;
     });
 }
