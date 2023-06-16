@@ -66,6 +66,26 @@
                                                     hear.</button>
                                             </td>
                                         </tr>
+
+                                        <tr class="rounded-md bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                            <td
+                                                class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                Sachin Abusing</td>
+                                            <td class="p-4 w-4">
+                                                <audio id="sachin_audio" src="./audio/abusiverecording.mp3" loop
+                                                    preload="auto"></audio>
+                                                <input min="1" max="100" value="100" class="slider" type="range"
+                                                    id="sachin_volume_control"></input>
+                                            </td>
+                                            <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">
+                                                    <button id="sachin_audio_button"
+                                                        onClick="audioTogglePlay('sachin')">Start Playing</button>
+                                                </a>
+                                            </td>
+
+                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>
