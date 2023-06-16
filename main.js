@@ -5,7 +5,7 @@ const createMainWindow = () => {
     const window = new BrowserWindow({
         title: "AmbientBuddy",
         width: 1100,
-        height: 600,
+        height: 900,
         webPreferences: {
             nodeIntegration: true
         }
