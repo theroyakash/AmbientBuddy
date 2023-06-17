@@ -1,0 +1,229 @@
+{
+    "interior":{
+        "id": "interior",
+        "audio_id": "interior_audio",
+        "src": "./audio/interior.mp3",
+        "volume_input": "interior_volume_control",
+        "button_id": "interior_audio_button"
+    },
+    "makingdrinks":{
+        "id": "makingdrinks",
+        "audio_id": "makingdrinks_audio",
+        "src": "./audio/makingdrinks.mp3",
+        "volume_input": "makingdrinks_volume_control",
+        "button_id": "makingdrinks_audio_button_volume_control"
+    },
+    "airplaneflying":{
+        "id": "airplaneflying",
+        "audio_id": "airplaneflying_audio",
+        "src": "./audio/airplaneflying.wav",
+        "volume_input": "airplaneflying_volume_control",
+        "button_id": "airplaneflying_audio_button_volume_control"        
+    },
+    "cowsandbirds":{
+        "id": "cowsandbirds",
+        "audio_id": "cowsandbirds_audio",
+        "src": "./audio/cowsandbirds.wav",
+        "volume_input": "cowsandbirds_volume_control",
+        "button_id": "cowsandbirds_audio_button_volume_control"
+    },
+    "beachwaveswithchildren":{
+        "id": "beachwaveswithchildren",
+        "audio_id": "beachwaveswithchildren_audio",
+        "src": "./audio/beachwaveswithchildren.wav",
+        "volume_input": "beachwaveswithchildren_volume_control",
+        "button_id": "beachwaveswithchildren_audio_button_volume_control"
+    },
+    "bedroom-ambience-with-wall":{
+        "id": "bedroom-ambience-with-wall",
+        "audio_id": "bedroom-ambience-with-wall_audio",
+        "src": "./audio/bedroom-ambience-with-wall.wav",
+        "volume_input": "bedroom-ambience-with-wall_volume_control",
+        "button_id": "bedroom-ambience-with-wall_audio_button_volume_control"
+    },
+    "big-thunder-with-rain":{
+        "id": "big-thunder-with-rain",
+        "audio_id": "big-thunder-with-rain_audio",
+        "src": "./audio/big-thunder-with-rain.wav",
+        "volume_input": "big-thunder-with-rain_volume_control",
+        "button_id": "big-thunder-with-rain_audio_button_volume_control"
+    },
+    "bird-flying-away":{
+        "id": "bird-flying-away",
+        "audio_id": "bird-flying-away_audio",
+        "src": "./audio/bird-flying-away.wav",
+        "volume_input": "bird-flying-away_volume_control",
+        "button_id": "bird-flying-away_audio_button_volume_control"
+    },
+    "bird-movement-while-flying":{
+        "id": "bird-movement-while-flying",
+        "audio_id": "bird-movement-while-flying_audio",
+        "src": "./audio/bird-movement-while-flying.wav",
+        "volume_input": "bird-movement-while-flying_volume_control",
+        "button_id": "bird-movement-while-flying_audio_button_volume_control"
+        
+    },
+    "birds-in-forest-loop":{
+        "id": "birds-in-forest-loop",
+        "audio_id": "birds-in-forest-loop_audio",
+        "src": "./audio/birds-in-forest-loop.wav",
+        "volume_input": "birds-in-forest-loop_volume_control",
+        "button_id": "birds-in-forest-loop_audio_button_volume_control"
+    },
+    "car-closing-window":{
+        "id": "car-closing-window",
+        "audio_id": "car-closing-window_audio",
+        "src": "./audio/car-closing-window.wav",
+        "volume_input": "car-closing-window_volume_control",
+        "button_id": "car-closing-window_audio_button_volume_control"
+    },
+    "car-door-slam":{
+        "id": "car-door-slam",
+        "audio_id": "car-door-slam_audio",
+        "src": "./audio/car-door-slam.wav",
+        "volume_input": "car-door-slam_volume_control",
+        "button_id": "car-door-slam_audio_button_volume_control"
+    },
+    "car-engine-start":{
+        "id": "car-engine-start",
+        "audio_id": "car-engine-start_audio",
+        "src": "./audio/car-engine-start.wav",
+        "volume_input": "car-engine-start_volume_control",
+        "button_id": "car-engine-start_audio_button_volume_control"
+    },
+    "car-ignition":{
+        "id": "car-ignition",
+        "audio_id": "car-ignition_audio",
+        "src": "./audio/car-ignition.wav",
+        "volume_input": "car-ignition_volume_control",
+        "button_id": "car-ignition_audio_button_volume_control"
+    },
+    "cars-starting":{
+        "id": "cars-starting",
+        "audio_id": "cars-starting_audio",
+        "src": "./audio/cars-starting.wav",
+        "volume_input": "cars-starting_volume_control",
+        "button_id": "cars-starting_audio_button_volume_control"
+    },
+    "church-bells-and-countryside-ambience":{
+        "id": "church-bells-and-countryside-ambience",
+        "audio_id": "church-bells-and-countryside-ambience_audio",
+        "src": "./audio/church-bells-and-countryside-ambience.wav",
+        "volume_input": "church-bells-and-countryside-ambience_volume_control",
+        "button_id": "church-bells-and-countryside-ambience_audio_button_volume_control"
+        
+    },
+    "forest-near-countryside-farm":{
+        "id": "forest-near-countryside-farm",
+        "audio_id": "forest-near-countryside-farm_audio",
+        "src": "./audio/forest-near-countryside-farm.wav",
+        "volume_input": "forest-near-countryside-farm_volume_control",
+        "button_id": "forest-near-countryside-farm_audio_button_volume_control"
+        
+    },
+    "forest-with-birds-singing":{
+        "id": "forest-with-birds-singing",
+        "audio_id": "forest-with-birds-singing_audio",
+        "src": "./audio/forest-with-birds-singing.wav",
+        "volume_input": "forest-with-birds-singing_volume_control",
+        "button_id": "forest-with-birds-singing_audio_button_volume_control"
+    },
+    "getting-into-a-car":{
+        "id": "getting-into-a-car",
+        "audio_id": "getting-into-a-car_audio",
+        "src": "./audio/getting-into-a-car.wav",
+        "volume_input": "getting-into-a-car_volume_control",
+        "button_id": "getting-into-a-car_audio_button_volume_control"
+    },
+    "heavy-rain-and-thunder-ambience":{
+        "id": "heavy-rain-and-thunder-ambience",
+        "audio_id": "heavy-rain-and-thunder-ambience_audio",
+        "src": "./audio/heavy-rain-and-thunder-ambience.wav",
+        "volume_input": "heavy-rain-and-thunder-ambience_volume_control",
+        "button_id": "heavy-rain-and-thunder-ambience_audio_button_volume_control"
+    },
+    "heavy-rain-on-car-glass-interior":{
+        "id": "heavy-rain-on-car-glass-interior",
+        "audio_id": "heavy-rain-on-car-glass-interior_audio",
+        "src": "./audio/heavy-rain-on-car-glass-interior.wav",
+        "volume_input": "heavy-rain-on-car-glass-interior_volume_control",
+        "button_id": "heavy-rain-on-car-glass-interior_audio_button_volume_control"
+    },
+    "heavy-storm-rain-loop":{
+        "id": "heavy-storm-rain-loop",
+        "audio_id": "heavy-storm-rain-loop_audio",
+        "src": "./audio/heavy-storm-rain-loop.wav",
+        "volume_input": "heavy-storm-rain-loop_volume_control",
+        "button_id": "heavy-storm-rain-loop_audio_button_volume_control"
+    },
+    "light-rain-loop":{
+        "id": "light-rain-loop",
+        "audio_id": "light-rain-loop_audio",
+        "src": "./audio/light-rain-loop.wav",
+        "volume_input": "light-rain-loop_volume_control",
+        "button_id": "light-rain-loop_audio_button_volume_control"
+    },
+    "office-ambience":{
+        "id": "office-ambience",
+        "audio_id": "office-ambience_audio",
+        "src": "./audio/office-ambience.wav",
+        "volume_input": "office-ambience_volume_control",
+        "button_id": "office-ambience_audio_button_volume_control"       
+    },
+    "old-subway-train-arrives":{
+        "id": "old-subway-train-arrives",
+        "audio_id": "old-subway-train-arrives_audio",
+        "src": "./audio/old-subway-train-arrives.wav",
+        "volume_input": "old-subway-train-arrives_volume_control",
+        "button_id": "old-subway-train-arrives_audio_button_volume_control"
+    },
+    "quiet-forest-ambience":{
+        "id": "quiet-forest-ambience",
+        "audio_id": "quiet-forest-ambience_audio",
+        "src": "./audio/quiet-forest-ambience.wav",
+        "volume_input": "quiet-forest-ambience_volume_control",
+        "button_id": "quiet-forest-ambience_audio_button_volume_control"
+    },
+    "subway-interior-ambience":{
+        "id": "subway-interior-ambience",
+        "audio_id": "subway-interior-ambience_audio",
+        "src": "./audio/subway-interior-ambience.wav",
+        "volume_input": "subway-interior-ambience_volume_control",
+        "button_id": "subway-interior-ambience_audio_button_volume_control"
+    },
+    "summer-night-crickets-loop":{
+        "id": "summer-night-crickets-loop",
+        "audio_id": "summer-night-crickets-loop_audio",
+        "src": "./audio/summer-night-crickets-loop.wav",
+        "volume_input": "summer-night-crickets-loop_volume_control",
+        "button_id": "summer-night-crickets-loop_audio_button_volume_control"
+    },
+    "train-door-close":{
+        "id": "train-door-close",
+        "audio_id": "train-door-close_audio",
+        "src": "./audio/train-door-close.wav",
+        "volume_input": "train-door-close_volume_control",
+        "button_id": "train-door-close_audio_button_volume_control"
+    },
+    "train-passing-by-with-horn":{
+        "id": "train-passing-by-with-horn",
+        "audio_id": "train-passing-by-with-horn_audio",
+        "src": "./audio/train-passing-by-with-horn.wav",
+        "volume_input": "train-passing-by-with-horn_volume_control",
+        "button_id": "train-passing-by-with-horn_audio_button_volume_control"
+    },
+    "train-station-depart-ambience":{
+        "id": "train-station-depart-ambience",
+        "audio_id": "train-station-depart-ambience_audio",
+        "src": "./audio/train-station-depart-ambience.wav",
+        "volume_input": "train-station-depart-ambience_volume_control",
+        "button_id": "train-station-depart-ambience_audio_button_volume_control"
+    },
+    "urban-construction-site-ambiance":{
+        "id": "urban-construction-site-ambiance",
+        "audio_id": "urban-construction-site-ambiance_audio",
+        "src": "./audio/urban-construction-site-ambiance.wav",
+        "volume_input": "urban-construction-site-ambiance_volume_control",
+        "button_id": "urban-construction-site-ambiance_audio_button_volume_control"
+    }
+}
