@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmbientBuddy</title>
+    <link rel="stylesheet" href="./public/build/tailwind.css">
+    <link rel="stylesheet" href="./fonts/fontsheet.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <section class="w-full px-8 text-gray-700 bg-white body-font">
+        <div class="container relative flex flex-col items-center justify-center py-5 mx-auto max-w-7xl md:flex-row">
+
+            <div class="absolute -bottom-3 rounded-full bg-red-700 filter blur-3xl w-full h-full opacity-20"></div>
+
+            <a href="/"
+                class="flex items-center inline-block font-sans text-3xl font-extrabold text-center text-black no-underline bg-transparent cursor-pointer focus:no-underline">
+                <img class="w-20 h-20" src="./images/MarshmallowCoffee.png">
+            </a>
+        </div>
+    </section>
+
+    <section class="flex flex-col w-full bg-white lg:flex-row">
+        <div class="flex justify-end p-8 bg-white lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
+            <div class="flex flex-col items-start justify-center w-full lg:max-w-lg">
+                <p
+                    class="font-mono inline-block px-2 py-1 mb-5 font-medium tracking-wide font-bold text-gray-900 uppercase bg-gray-200 rounded-lg text-xxs">
+                    CURATED PLAYLIST
+                </p>
+
+                <div class="relative">
+                    <div
+                        class="absolute top-0 left-4 bg-gradient-to-r from-blue-500 to-indigo-800 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute top-0 right-4 bg-indigo-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-20 bg-yellow-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+
+                    <h5 style="font-family: Regards;"
+                        class="mb-3 text-4xl sm:text-5xl md:text-5xl lg:text-5xl font-extrabold text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-indigo-800">
+                        this is<br>ambientbuddy
+                    </h5>
+                </div>
+
+                <br>
+
+                <div class="flex items-center">
+                    <div class="grid gap-8 items-start justify-center">
+                        <div class="relative group">
+
+                            <div
+                                class="absolute -bottom-3 rounded-lg bg-yellow-700 filter blur-2xl w-40 h-10 opacity-30">
+                            </div>
+
+                            <div
+                                class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-lg">
+                                <table class="w-full text-sm text-left text-gray-500">
+                                    <thead class="text-xs text-gray-700 bg-gray-100">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3">
+                                                <p style="font-family: Regards;">sound</p>
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                <p style="font-family: Regards;">volume</p>
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                <p style="font-family: Regards;">play/pause</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row"
+                                                style="font-family: Regards;"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                Sachin Abusive Audio
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <audio id="sachin_audio" src="./audio/vedya.mp3" loop
+                                                    preload="auto"></audio>
+                                                <input min="1" max="100" value="100" class="slider" type="range"
+                                                    id="sachin_volume_control"></input>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <button id="sachin_audio_button" onClick="audioTogglePlay('sachin')"
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    <span
+                                                        class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                Dhoni Abusive Audio
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <audio id="dhoni_audio" src="./audio/abusiverecording.mp3" loop
+                                                    preload="auto"></audio>
+                                                <input min="1" max="100" value="100" class="slider" type="range"
+                                                    id="dhoni_volume_control"></input>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <button id="dhoni_audio_button" onClick="audioTogglePlay('dhoni')"
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    <span
+                                                        class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                Dhoni Abusive Audio
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <audio id="dhoni_audio" src="./audio/abusiverecording.mp3" loop
+                                                    preload="auto"></audio>
+                                                <input min="1" max="100" value="100" class="slider" type="range"
+                                                    id="dhoni_volume_control"></input>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <button id="dhoni_audio_button" onClick="audioTogglePlay('dhoni')"
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    <span
+                                                        class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative lg:w-1/2">
+            <img src="./images/flowercrown.png" alt="Hero Image"
+                class="object-scale-down h-300">
+        </div>
+    </section>
+
+    <!-- More Audio -->
+
+    <section class="py-20 bg-white">
+        <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto tracking-tighter relative">
+                <h2 style="font-family: Regards;" class="text-2xl font-bold leading-none text-black sm:text-3xl md:text-4xl">
+                    More Audio
+                </h2>
+                <div class="absolute -bottom-4 rounded-full bg-yellow-300 filter blur-3xl w-full h-full opacity-20"></div>
+            </div>
+            <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                Below are all the audio available, to request a specific audio track contact us.
+            </p>
+        </div>
+
+        <br><br><br>
+
+        <div class="px-4 mx-auto text-center w-1/2 sm:px-6 lg:px-8">
+            <div class="grid gap-8 items-start text-center">
+                <div class="relative group">
+
+                    <div
+                        class="absolute -bottom-3 rounded-lg bg-yellow-700 filter blur-2xl w-40 h-10 opacity-30">
+                    </div>
+
+                    <div>
+                        <div
+                        class="absolute top-0 left-4 bg-gradient-to-r from-blue-500 to-indigo-800 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute top-0 right-4 bg-indigo-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-20 bg-yellow-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                        <div
+                        class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-lg">
+                        
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 bg-gray-100">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        <p style="font-family: Regards;">sound</p>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <p style="font-family: Regards;">volume</p>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <p style="font-family: Regards;">play/pause</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        interior
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="interior_audio" src="./audio/interior.mp3" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="interior_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="interior_audio_button" onClick="audioTogglePlay('interior')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        makingdrinks
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="makingdrinks_audio" src="./audio/makingdrinks.mp3" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="makingdrinks_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="makingdrinks_audio_button" onClick="audioTogglePlay('makingdrinks')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        airplaneflying
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="airplaneflying_audio" src="./audio/airplaneflying.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="airplaneflying_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="airplaneflying_audio_button" onClick="audioTogglePlay('airplaneflying')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        cowsandbirds
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="cowsandbirds_audio" src="./audio/cowsandbirds.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="cowsandbirds_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="cowsandbirds_audio_button" onClick="audioTogglePlay('cowsandbirds')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        beachwaveswithchildren
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="beachwaveswithchildren_audio" src="./audio/beachwaveswithchildren.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="beachwaveswithchildren_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="beachwaveswithchildren_audio_button" onClick="audioTogglePlay('beachwaveswithchildren')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        bedroom-ambience-with-wall
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="bedroom-ambience-with-wall_audio" src="./audio/bedroom-ambience-with-wall.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="bedroom-ambience-with-wall_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="bedroom-ambience-with-wall_audio_button" onClick="audioTogglePlay('bedroom-ambience-with-wall')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        big-thunder-with-rain
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="big-thunder-with-rain_audio" src="./audio/big-thunder-with-rain.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="big-thunder-with-rain_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="big-thunder-with-rain_audio_button" onClick="audioTogglePlay('big-thunder-with-rain')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        bird-flying-away
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="bird-flying-away_audio" src="./audio/bird-flying-away.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="bird-flying-away_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="bird-flying-away_audio_button" onClick="audioTogglePlay('bird-flying-away')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        bird-movement-while-flying
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="bird-movement-while-flying_audio" src="./audio/bird-movement-while-flying.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="bird-movement-while-flying_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="bird-movement-while-flying_audio_button" onClick="audioTogglePlay('bird-movement-while-flying')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        birds-in-forest-loop
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="birds-in-forest-loop_audio" src="./audio/birds-in-forest-loop.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="birds-in-forest-loop_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="birds-in-forest-loop_audio_button" onClick="audioTogglePlay('birds-in-forest-loop')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        car-closing-window
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="car-closing-window_audio" src="./audio/car-closing-window.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="car-closing-window_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="car-closing-window_audio_button" onClick="audioTogglePlay('car-closing-window')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        car-door-slam
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="car-door-slam_audio" src="./audio/car-door-slam.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="car-door-slam_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="car-door-slam_audio_button" onClick="audioTogglePlay('car-door-slam')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        car-engine-start
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="car-engine-start_audio" src="./audio/car-engine-start.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="car-engine-start_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="car-engine-start_audio_button" onClick="audioTogglePlay('car-engine-start')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        car-ignition
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="car-ignition_audio" src="./audio/car-ignition.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="car-ignition_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="car-ignition_audio_button" onClick="audioTogglePlay('car-ignition')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        cars-starting
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="cars-starting_audio" src="./audio/cars-starting.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="cars-starting_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="cars-starting_audio_button" onClick="audioTogglePlay('cars-starting')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        church-bells-and-countryside-ambience
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="church-bells-and-countryside-ambience_audio" src="./audio/church-bells-and-countryside-ambience.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="church-bells-and-countryside-ambience_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="church-bells-and-countryside-ambience_audio_button" onClick="audioTogglePlay('church-bells-and-countryside-ambience')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        forest-near-countryside-farm
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="forest-near-countryside-farm_audio" src="./audio/forest-near-countryside-farm.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="forest-near-countryside-farm_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="forest-near-countryside-farm_audio_button" onClick="audioTogglePlay('forest-near-countryside-farm')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        forest-with-birds-singing
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="forest-with-birds-singing_audio" src="./audio/forest-with-birds-singing.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="forest-with-birds-singing_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="forest-with-birds-singing_audio_button" onClick="audioTogglePlay('forest-with-birds-singing')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        getting-into-a-car
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="getting-into-a-car_audio" src="./audio/getting-into-a-car.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="getting-into-a-car_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="getting-into-a-car_audio_button" onClick="audioTogglePlay('getting-into-a-car')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        heavy-rain-and-thunder-ambience
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="heavy-rain-and-thunder-ambience_audio" src="./audio/heavy-rain-and-thunder-ambience.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="heavy-rain-and-thunder-ambience_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="heavy-rain-and-thunder-ambience_audio_button" onClick="audioTogglePlay('heavy-rain-and-thunder-ambience')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        heavy-rain-on-car-glass-interior
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="heavy-rain-on-car-glass-interior_audio" src="./audio/heavy-rain-on-car-glass-interior.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="heavy-rain-on-car-glass-interior_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="heavy-rain-on-car-glass-interior_audio_button" onClick="audioTogglePlay('heavy-rain-on-car-glass-interior')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        heavy-storm-rain-loop
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="heavy-storm-rain-loop_audio" src="./audio/heavy-storm-rain-loop.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="heavy-storm-rain-loop_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="heavy-storm-rain-loop_audio_button" onClick="audioTogglePlay('heavy-storm-rain-loop')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        light-rain-loop
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="light-rain-loop_audio" src="./audio/light-rain-loop.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="light-rain-loop_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="light-rain-loop_audio_button" onClick="audioTogglePlay('light-rain-loop')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        office-ambience
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="office-ambience_audio" src="./audio/office-ambience.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="office-ambience_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="office-ambience_audio_button" onClick="audioTogglePlay('office-ambience')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        old-subway-train-arrives
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="old-subway-train-arrives_audio" src="./audio/old-subway-train-arrives.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="old-subway-train-arrives_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="old-subway-train-arrives_audio_button" onClick="audioTogglePlay('old-subway-train-arrives')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        quiet-forest-ambience
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="quiet-forest-ambience_audio" src="./audio/quiet-forest-ambience.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="quiet-forest-ambience_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="quiet-forest-ambience_audio_button" onClick="audioTogglePlay('quiet-forest-ambience')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        subway-interior-ambience
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="subway-interior-ambience_audio" src="./audio/subway-interior-ambience.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="subway-interior-ambience_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="subway-interior-ambience_audio_button" onClick="audioTogglePlay('subway-interior-ambience')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        summer-night-crickets-loop
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="summer-night-crickets-loop_audio" src="./audio/summer-night-crickets-loop.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="summer-night-crickets-loop_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="summer-night-crickets-loop_audio_button" onClick="audioTogglePlay('summer-night-crickets-loop')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        train-door-close
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="train-door-close_audio" src="./audio/train-door-close.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="train-door-close_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="train-door-close_audio_button" onClick="audioTogglePlay('train-door-close')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        train-passing-by-with-horn
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="train-passing-by-with-horn_audio" src="./audio/train-passing-by-with-horn.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="train-passing-by-with-horn_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="train-passing-by-with-horn_audio_button" onClick="audioTogglePlay('train-passing-by-with-horn')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        train-station-depart-ambience
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="train-station-depart-ambience_audio" src="./audio/train-station-depart-ambience.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="train-station-depart-ambience_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="train-station-depart-ambience_audio_button" onClick="audioTogglePlay('train-station-depart-ambience')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        urban-construction-site-ambiance
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="urban-construction-site-ambiance_audio" src="./audio/urban-construction-site-ambiance.wav" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="urban-construction-site-ambiance_volume_control"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="urban-construction-site-ambiance_audio_button" onClick="audioTogglePlay('urban-construction-site-ambiance')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="audio.js"></script>
+</body>
+
+</html>

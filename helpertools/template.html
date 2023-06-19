@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmbientBuddy</title>
+    <link rel="stylesheet" href="./public/build/tailwind.css">
+    <link rel="stylesheet" href="./fonts/fontsheet.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <section class="w-full px-8 text-gray-700 bg-white body-font">
+        <div class="container relative flex flex-col items-center justify-center py-5 mx-auto max-w-7xl md:flex-row">
+
+            <div class="absolute -bottom-3 rounded-full bg-red-700 filter blur-3xl w-full h-full opacity-20"></div>
+
+            <a href="/"
+                class="flex items-center inline-block font-sans text-3xl font-extrabold text-center text-black no-underline bg-transparent cursor-pointer focus:no-underline">
+                <img class="w-20 h-20" src="./images/MarshmallowCoffee.png">
+            </a>
+        </div>
+    </section>
+
+    <section class="flex flex-col w-full bg-white lg:flex-row">
+        <div class="flex justify-end p-8 bg-white lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
+            <div class="flex flex-col items-start justify-center w-full lg:max-w-lg">
+                <p
+                    class="font-mono inline-block px-2 py-1 mb-5 font-medium tracking-wide font-bold text-gray-900 uppercase bg-gray-200 rounded-lg text-xxs">
+                    CURATED PLAYLIST
+                </p>
+
+                <div class="relative">
+                    <div
+                        class="absolute top-0 left-4 bg-gradient-to-r from-blue-500 to-indigo-800 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute top-0 right-4 bg-indigo-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-20 bg-yellow-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+
+                    <h5 style="font-family: Regards;"
+                        class="mb-3 text-4xl sm:text-5xl md:text-5xl lg:text-5xl font-extrabold text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-indigo-800">
+                        this is<br>ambientbuddy
+                    </h5>
+                </div>
+
+                <br>
+
+                <div class="flex items-center">
+                    <div class="grid gap-8 items-start justify-center">
+                        <div class="relative group">
+
+                            <div
+                                class="absolute -bottom-3 rounded-lg bg-yellow-700 filter blur-2xl w-40 h-10 opacity-30">
+                            </div>
+
+                            <div
+                                class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-lg">
+                                <table class="w-full text-sm text-left text-gray-500">
+                                    <thead class="text-xs text-gray-700 bg-gray-100">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3">
+                                                <p style="font-family: Regards;">sound</p>
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                <p style="font-family: Regards;">volume</p>
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                <p style="font-family: Regards;">play/pause</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row"
+                                                style="font-family: Regards;"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                Sachin Abusive Audio
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <audio id="sachin_audio" src="./audio/vedya.mp3" loop
+                                                    preload="auto"></audio>
+                                                <input min="1" max="100" value="100" class="slider" type="range"
+                                                    id="sachin_volume_control"></input>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <button id="sachin_audio_button" onClick="audioTogglePlay('sachin')"
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    <span
+                                                        class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                Dhoni Abusive Audio
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <audio id="dhoni_audio" src="./audio/abusiverecording.mp3" loop
+                                                    preload="auto"></audio>
+                                                <input min="1" max="100" value="100" class="slider" type="range"
+                                                    id="dhoni_volume_control"></input>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <button id="dhoni_audio_button" onClick="audioTogglePlay('dhoni')"
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    <span
+                                                        class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                Dhoni Abusive Audio
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <audio id="dhoni_audio" src="./audio/abusiverecording.mp3" loop
+                                                    preload="auto"></audio>
+                                                <input min="1" max="100" value="100" class="slider" type="range"
+                                                    id="dhoni_volume_control"></input>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <button id="dhoni_audio_button" onClick="audioTogglePlay('dhoni')"
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    <span
+                                                        class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative lg:w-1/2">
+            <img src="./images/flowercrown.png" alt="Hero Image"
+                class="object-scale-down h-300">
+        </div>
+    </section>
+
+    <!-- More Audio -->
+
+    <section class="py-20 bg-white">
+        <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto tracking-tighter relative">
+                <h2 style="font-family: Regards;" class="text-2xl font-bold leading-none text-black sm:text-3xl md:text-4xl">
+                    More Audio
+                </h2>
+                <div class="absolute -bottom-4 rounded-full bg-yellow-300 filter blur-3xl w-full h-full opacity-20"></div>
+            </div>
+            <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                Below are all the audio available, to request a specific audio track contact us.
+            </p>
+        </div>
+
+        <br><br><br>
+
+        <div class="px-4 mx-auto text-center w-1/2 sm:px-6 lg:px-8">
+            <div class="grid gap-8 items-start text-center">
+                <div class="relative group">
+
+                    <div
+                        class="absolute -bottom-3 rounded-lg bg-yellow-700 filter blur-2xl w-40 h-10 opacity-30">
+                    </div>
+
+                    <div>
+                        <div
+                        class="absolute top-0 left-4 bg-gradient-to-r from-blue-500 to-indigo-800 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute top-0 right-4 bg-indigo-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                    <div
+                        class="absolute -bottom-8 left-20 bg-yellow-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
+                    </div>
+                        <div
+                        class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-lg">
+                        
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 bg-gray-100">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        <p style="font-family: Regards;">sound</p>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <p style="font-family: Regards;">volume</p>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <p style="font-family: Regards;">play/pause</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for key in data %}
+                                <tr class="bg-white dark:bg-gray-800">
+                                    <th scope="row"
+                                        style="font-family: Regards;"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                        {{data[key]["id"]}}
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <audio id="{{data[key]['audio_id']}}" src="{{data[key]['src']}}" loop
+                                            preload="auto"></audio>
+                                        <input min="1" max="100" value="100" class="slider" type="range"
+                                            id="{{data[key]['volume_input']}}"></input>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button id="{{data[key]['button_id']}}" onClick="audioTogglePlay('{{data[key]['id']}}')"
+                                            class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                            <span
+                                                class="text-blue-700 hover:text-blue-900 transition duration-200">Play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                {% endfor%}
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="audio.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ const path = require('path');
 const createMainWindow = () => {
     const window = new BrowserWindow({
         title: "AmbientBuddy",
-        width: 1100,
+        width: 1400,
         height: 900,
         webPreferences: {
             nodeIntegration: true
