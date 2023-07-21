@@ -1,5 +1,5 @@
 # AmbientBuddy
-Introducing AmbientBuddy by [theroyakash](https://theroyakash.com) and [Abhirup](https://github.com/amder111).
+Introducing AmbientBuddy by [theroyakash](https://theroyakash.com) and [Abhirup](https://github.com/abhirupmjdr).
 
 Immerse yourself in a world of calm and tranquility with AmbientBuddy, the ultimate ambient sound app designed to transport you to a realm of pure relaxation.
 
