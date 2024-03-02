@@ -1,5 +1,8 @@
 import jinja2, json
 import os
+from rich.console import Console
+
+console = Console()
 
 def delete_if_exsist(filename):
 	if os.path.exists(filename):
@@ -10,10 +13,13 @@ def delete_if_exsist(filename):
 with open(f'audio.json') as f:
 	data = json.load(f)
 
-html = jinja2.Environment(
-    loader=jinja2.FileSystemLoader('./')).get_template('template.html').render(data = data)
+main_audio = data['main_audio']
+more_audio = data['more_audio']
 
-OUT = "index.html"  # Compiled Index.HTML file with all the audio information from the JSON datastore
+html = jinja2.Environment(
+    loader=jinja2.FileSystemLoader('./')).get_template('template.html').render(main_audio = main_audio, more_audio = more_audio)
+
+OUT = "../index.html"  # Compiled Index.HTML file with all the audio information from the JSON datastore
 delete_if_exsist(OUT) # Remove if already existing
 
 with open(OUT,'w') as f: 
