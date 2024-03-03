@@ -1,13 +1,13 @@
 {
   "name": "ambientbuddy",
-  "version": "1.69.420",
+  "version": "2.0",
   "description": "Ambient Buddy App. Creator ~theroyakash.com",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
+    "packagemac": "electron-forge make",
+    "packagewin": "electron-forge make --platform=win32 --arch=x64",
     "buildcss": "postcss tailwind.css -o public/build/tailwind.css"
   },
   "author": "theroyakash",
