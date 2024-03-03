@@ -45,14 +45,18 @@
                         class="font-sign font-bold mb-3 text-3xl sm:text-5xl md:text-5xl lg:text-5xl text-transparent bg-gradient-to-r bg-clip-text from-blue-500 to-indigo-800">
                         this is <br> ambientbuddy
                     </h3>
-                    <p class="pb-3 pt-5 font-sign font-bold text-transparent bg-gradient-to-r bg-clip-text from-red-700 to-indigo-800">
-                        Immerse yourself in a world of calm and tranquility, The ultimate ambient sound app designed to transport you to a realm of pure relaxation.
+                    <p
+                        class="pb-3 pt-5 font-sign text-transparent bg-gradient-to-r bg-clip-text from-indigo-700 to-red-800">
+                        Immerse yourself in a world of calm and tranquility, The ultimate ambient sound app designed to
+                        transport you to a realm of pure relaxation.
                     </p>
 
                     <hr>
 
-                    <p class="pb-3 pt-5 font-sign font-bold text-transparent bg-gradient-to-r bg-clip-text from-orange-700 to-red-700">
-                        Adjust the intensity of each sound to find the perfect balance, seamlessly blend multiple soundscapes to create your own personalized sanctuary.
+                    <p
+                        class="pb-3 pt-5 font-sign text-transparent bg-gradient-to-r bg-clip-text from-orange-700 to-red-700">
+                        Adjust the intensity of each sound to find the perfect balance, seamlessly blend multiple
+                        soundscapes to create your own personalized sanctuary.
                     </p>
                 </div>
 
@@ -67,7 +71,7 @@
                             </div>
 
                             <div
-                                class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-lg">
+                                class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-xl">
                                 <table class="w-full text-sm text-left text-gray-500">
                                     <thead class="text-xs text-gray-700 bg-gray-100">
                                         <tr>
@@ -85,9 +89,9 @@
                                     <tbody>
                                         {% for key in main_audio %}
                                         <tr class="bg-white ">
-                                            <th scope="row"
-                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                                {{main_audio[key]["name"]}}
+                                            <th scope="row" class="px-6 py-4 whitespace-nowrap">
+                                                <span
+                                                    class="font-sign text-indigo-600">{{main_audio[key]["name"]}}</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="{{main_audio[key]['audio_id']}}"
@@ -129,15 +133,15 @@
     <section class="py-20 bg-white">
         <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
             <div class="text-center max-w-4xl mx-auto tracking-tighter relative">
-                <h2 class="font-sign text-2xl font-bold leading-none text-black sm:text-3xl md:text-4xl">
+                <h2 class="font-garamond text-2xl font-bold leading-none text-black sm:text-3xl md:text-4xl">
                     More Audio
                 </h2>
                 <div class="absolute -bottom-4 rounded-full bg-yellow-300 filter blur-3xl w-full h-full opacity-20">
                 </div>
             </div>
             <p
-                class="font-sign max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Below are all the audio available, to request a specific audio track contact us.
+                class="font-garamond max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                Below are all the audio available in app, to request a specific audio track please contact us.
             </p>
         </div>
 
@@ -182,36 +186,37 @@
 
                                     <tr class="bg-white">
                                         <th scope="row" class="px-6 py-4"> <span
-                                            class="text-small font-mono inline-block px-2 tracking-wide font-bold text-white uppercase bg-gradient-to-r from-red-800 to-indigo-800 rounded-lg text-xxs">{{ category }} </span></th>
+                                                class="text-small font-mono inline-block px-2 tracking-wide font-bold text-white uppercase bg-gradient-to-r from-red-800 to-indigo-800 rounded-lg text-xxs">{{
+                                                category }} </span></th>
                                         <td class=""></td>
                                         <td class=""></td>
                                     </tr>
 
-                                        {% for key in more_audio[category] %}
-                                        <tr class="bg-white ">
-                                            <th scope="row" class="px-6 py-4 font-sign font-medium text-gray-900 whitespace-nowrap">
-                                                {{more_audio[category][key]["name"]}}
-                                            </th>
-                                            <td class="px-6 py-4">
-                                                <audio id="{{more_audio[category][key]['audio_id']}}"
-                                                    src="{{more_audio[category][key]['src']}}" preload="auto"></audio>
-                                                <audio id="{{more_audio[category][key]['audio_id']}}_crossfade"
-                                                    src="{{more_audio[category][key]['src']}}" preload="auto"></audio>
+                                    {% for key in more_audio[category] %}
+                                    <tr class="bg-white ">
+                                        <th scope="row" class="px-6 py-4 font-sign text-gray-900 whitespace-nowrap">
+                                            {{more_audio[category][key]["name"]}}
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            <audio id="{{more_audio[category][key]['audio_id']}}"
+                                                src="{{more_audio[category][key]['src']}}" preload="auto"></audio>
+                                            <audio id="{{more_audio[category][key]['audio_id']}}_crossfade"
+                                                src="{{more_audio[category][key]['src']}}" preload="auto"></audio>
 
-                                                <input min="1" max="100" value="100" class="slider" type="range"
-                                                    id="{{more_audio[category][key]['volume_input']}}"></input>
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <button id="{{more_audio[category][key]['button_id']}}"
-                                                    onClick="audioTogglePlay('{{more_audio[category][key]['id']}}')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
-                                                    <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
-                                                </button>
-                                            </td>
-                                        </tr>
+                                            <input min="1" max="100" value="100" class="slider" type="range"
+                                                id="{{more_audio[category][key]['volume_input']}}"></input>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <button id="{{more_audio[category][key]['button_id']}}"
+                                                onClick="audioTogglePlay('{{more_audio[category][key]['id']}}')"
+                                                class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                <span
+                                                    class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                            </button>
+                                        </td>
+                                    </tr>
 
-                                        {% endfor %}
+                                    {% endfor %}
 
                                     {% endfor%}
                                 </tbody>

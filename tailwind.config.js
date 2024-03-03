@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'sign': ['signifier', ...defaultTheme.fontFamily.sans],
+        'garamond': ['AppleGaramond', 'serif'],
       },
     },
   },

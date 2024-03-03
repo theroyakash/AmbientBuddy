@@ -1,30 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @font-face {
     font-family: "signifier";
-    src: url("../fonts/sign.woff2") format("woff2");
+    src: url("sign.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
-
 @font-face {
     font-family: "signifier";
-    src: url("../fonts/signbold.woff2") format("woff2");
+    src: url("signbold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
 }
-
 
 /* Font face for AppleGaramond Regular */
 @font-face {
     font-family: 'AppleGaramond';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/AppleGaramond.ttf') format('truetype');
+    src: url('AppleGaramond.ttf') format('truetype');
 }
 
 /* Font face for AppleGaramond Italic */
@@ -32,7 +25,7 @@
     font-family: 'AppleGaramond';
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/AppleGaramond-Italic.ttf') format('truetype');
+    src: url('AppleGaramond-Italic.ttf') format('truetype');
 }
 
 /* Font face for AppleGaramond Bold */
@@ -40,7 +33,7 @@
     font-family: 'AppleGaramond';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/AppleGaramond-Bold.ttf') format('truetype');
+    src: url('AppleGaramond-Bold.ttf') format('truetype');
 }
 
 /* Font face for AppleGaramond Bold Italic */
@@ -48,5 +41,5 @@
     font-family: 'AppleGaramond';
     font-style: italic;
     font-weight: 700;
-    src: url('../fonts/AppleGaramond-BoldItalic.ttf') format('truetype');
+    src: url('AppleGaramond-BoldItalic.ttf') format('truetype');
 }

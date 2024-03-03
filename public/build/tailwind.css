@@ -624,6 +624,9 @@ video {
 .rounded-lg {
   border-radius: 0.5rem;
 }
+.rounded-xl {
+  border-radius: 0.75rem;
+}
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -667,14 +670,14 @@ video {
   --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.from-indigo-700 {
+  --tw-gradient-from: #4338ca var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(67 56 202 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 .from-orange-700 {
   --tw-gradient-from: #c2410c var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(194 65 12 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.from-red-700 {
-  --tw-gradient-from: #b91c1c var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(185 28 28 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-red-800 {
@@ -687,6 +690,9 @@ video {
 }
 .to-red-700 {
   --tw-gradient-to: #b91c1c var(--tw-gradient-to-position);
+}
+.to-red-800 {
+  --tw-gradient-to: #991b1b var(--tw-gradient-to-position);
 }
 .bg-clip-text {
   -webkit-background-clip: text;
@@ -758,6 +764,9 @@ video {
 .text-center {
   text-align: center;
 }
+.font-garamond {
+  font-family: AppleGaramond, serif;
+}
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -828,6 +837,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
 .text-transparent {
   color: transparent;
 }
@@ -893,7 +906,7 @@ video {
 
 @font-face {
     font-family: "signifier";
-    src: url("./fonts/sign.woff2") format("woff2");
+    src: url("../fonts/sign.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -901,39 +914,55 @@ video {
 
 @font-face {
     font-family: "signifier";
-    src: url("./fonts/signbold.woff2") format("woff2");
+    src: url("../fonts/signbold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
 }
 
 
+/* Font face for AppleGaramond Regular */
+@font-face {
+    font-family: 'AppleGaramond';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/AppleGaramond.ttf') format('truetype');
+}
+
+/* Font face for AppleGaramond Italic */
+@font-face {
+    font-family: 'AppleGaramond';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/AppleGaramond-Italic.ttf') format('truetype');
+}
+
+/* Font face for AppleGaramond Bold */
+@font-face {
+    font-family: 'AppleGaramond';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/AppleGaramond-Bold.ttf') format('truetype');
+}
+
+/* Font face for AppleGaramond Bold Italic */
+@font-face {
+    font-family: 'AppleGaramond';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/AppleGaramond-BoldItalic.ttf') format('truetype');
+}
 .hover\:text-blue-900:hover {
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity));
 }
-
-
 .hover\:shadow-2xl:hover {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
-
 .focus\:no-underline:focus {
   text-decoration-line: none;
 }
-
-
-@media (prefers-color-scheme: dark) {
-
-  .dark\:bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  }
-}
-
-
 @media (min-width: 640px) {
 
   .sm\:px-6 {
@@ -956,8 +985,6 @@ video {
     line-height: 1.75rem;
   }
 }
-
-
 @media (min-width: 768px) {
 
   .md\:mt-5 {
@@ -987,8 +1014,6 @@ video {
     line-height: 1.75rem;
   }
 }
-
-
 @media (min-width: 1024px) {
 
   .lg\:w-1\/2 {
