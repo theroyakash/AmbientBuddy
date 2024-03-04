@@ -16,6 +16,6 @@ function audioTogglePlay(id) {
 
     // Volume control
     volumeControl.addEventListener("change", function (event) {
-        mainAudio.volume = crossfadeAudio.volume = event.currentTarget.value / 100;
+        mainAudio.volume = event.currentTarget.value / 100;
     });
 }

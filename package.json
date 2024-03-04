@@ -1,6 +1,6 @@
 {
-  "name": "ambientbuddy",
-  "version": "2.1.0",
+  "name": "AmbientBuddy",
+  "version": "2.2.0",
   "description": "Ambient Buddy App. Creator ~theroyakash.com",
   "main": "main.js",
   "scripts": {
