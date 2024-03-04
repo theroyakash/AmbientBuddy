@@ -1027,10 +1027,6 @@ video {
     font-weight: 700;
     src: url('../fonts/AppleGaramond-BoldItalic.ttf') format('truetype');
 }
-.hover\:text-blue-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(30 58 138 / var(--tw-text-opacity));
-}
 .hover\:shadow-2xl:hover {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -1067,14 +1063,27 @@ video {
 :is(.dark .dark\:bg-gradient-to-br) {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
+:is(.dark .dark\:bg-gradient-to-r) {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
 :is(.dark .dark\:from-blue-50) {
   --tw-gradient-from: #eff6ff var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(239 246 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+:is(.dark .dark\:from-red-100) {
+  --tw-gradient-from: #fee2e2 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(254 226 226 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
 :is(.dark .dark\:from-red-50) {
   --tw-gradient-from: #fef2f2 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(254 242 242 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+:is(.dark .dark\:from-red-500) {
+  --tw-gradient-from: #ef4444 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(239 68 68 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 :is(.dark .dark\:from-violet-300) {
@@ -1090,6 +1099,12 @@ video {
 :is(.dark .dark\:to-blue-50) {
   --tw-gradient-to: #eff6ff var(--tw-gradient-to-position);
 }
+:is(.dark .dark\:to-indigo-200) {
+  --tw-gradient-to: #c7d2fe var(--tw-gradient-to-position);
+}
+:is(.dark .dark\:to-indigo-500) {
+  --tw-gradient-to: #6366f1 var(--tw-gradient-to-position);
+}
 :is(.dark .dark\:to-pink-600) {
   --tw-gradient-to: #db2777 var(--tw-gradient-to-position);
 }
@@ -1099,9 +1114,17 @@ video {
 :is(.dark .dark\:to-rose-50) {
   --tw-gradient-to: #fff1f2 var(--tw-gradient-to-position);
 }
+:is(.dark .dark\:text-emerald-700) {
+  --tw-text-opacity: 1;
+  color: rgb(4 120 87 / var(--tw-text-opacity));
+}
 :is(.dark .dark\:text-gray-100) {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+:is(.dark .dark\:text-gray-200) {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 :is(.dark .dark\:text-gray-50) {
   --tw-text-opacity: 1;
