@@ -8,7 +8,7 @@ function audioTogglePlay(id) {
         mainAudio.play();
         
         audioButton.innerHTML =
-            '<span class="text-red-500 hover:text-blue-900 font-mono font-bold transition duration-200">STOP</span>';
+            '<span class="text-red-500 hover:text-blue-900 dark:text-red-300 font-mono font-bold transition duration-200">STOP</span>';
 
         // Crossfade audio when finishes
         var remainingTime = (mainAudio.duration - mainAudio.currentTime) * 1000;
@@ -42,7 +42,7 @@ function audioTogglePlay(id) {
         mainAudio.pause();
         crossfadeAudio.pause();
         audioButton.innerHTML =
-            '<span class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>';
+            '<span class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>';
     }
 
     // Volume control

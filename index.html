@@ -6,27 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AmbientBuddy</title>
     <link rel="stylesheet" href="./public/build/tailwind.css">
+
 </head>
 
 <body>
     <!-- Navigation -->
-    <section class="w-full px-8 text-gray-700 bg-white body-font">
+    <section class="w-full px-8 text-gray-700 bg-white body-font dark:text-gray-100 dark:bg-black">
         <div class="container relative flex flex-col items-center justify-center py-5 mx-auto max-w-7xl md:flex-row">
 
-            <div class="absolute -bottom-3 rounded-full bg-gradient-to-b from-fuchsia-500 to-cyan-500 filter blur-3xl w-full h-full opacity-50"></div>
+            <div
+                class="absolute -bottom-3 rounded-full bg-gradient-to-b from-fuchsia-500 to-cyan-500 filter blur-3xl w-full h-full opacity-50">
+            </div>
 
             <a href="/"
                 class="items-center inline-block font-sans text-3xl font-extrabold text-center text-black no-underline bg-transparent cursor-pointer focus:no-underline">
-                <img class="w-20 h-20" src="./images/MarshmallowCoffee.png">
+                <img class="w-20 h-20 invert-0" src="./images/MarshmallowCoffee.png">
             </a>
         </div>
     </section>
 
-    <section class="flex flex-col w-full bg-white lg:flex-row">
-        <div class="flex justify-end p-8 bg-white lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
+    <section class="flex flex-col w-full bg-white dark:bg-black lg:flex-row">
+        <div class="flex justify-end p-8 bg-white dark:bg-black lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
             <div class="flex flex-col items-start justify-center w-full lg:max-w-lg">
                 <p
-                    class="font-mono font-extrabold tracking-tighter inline-block px-2 py-1 mb-5 text-gray-900 uppercase bg-gray-200 rounded-lg shadow-2xl">
+                    class="font-mono font-extrabold tracking-tighter inline-block px-2 py-1 mb-5 text-gray-900 dark:text-white uppercase bg-gray-200 dark:bg-gray-500 rounded-lg shadow-2xl">
                     CURATED PLAYLIST
                 </p>
 
@@ -42,11 +45,11 @@
                     </div>
 
                     <h3
-                        class="font-sign font-bold mb-3 text-3xl sm:text-5xl md:text-5xl lg:text-5xl tracking-tighter bg-gradient-to-br from-amber-500 via-violet-600 to-pink-500 bg-clip-text text-transparent">
+                        class="font-sign font-bold mb-3 text-3xl sm:text-5xl md:text-5xl lg:text-5xl tracking-tighter bg-gradient-to-br from-amber-500 via-violet-600 to-pink-500 dark:bg-gradient-to-br dark:from-violet-300 dark:to-red-500 bg-clip-text text-transparent">
                         this is <br> ambientbuddy
                     </h3>
                     <p
-                        class="pb-3 pt-5 font-sign text-transparent bg-gradient-to-tr bg-clip-text from-blue-700 to-rose-600">
+                        class="pb-3 pt-5 font-sign text-transparent bg-gradient-to-tr bg-clip-text from-blue-700 to-rose-600 dark:from-blue-50 dark:to-rose-50">
                         Immerse yourself in a world of calm and tranquility, The ultimate ambient sound app designed to
                         transport you to a realm of pure relaxation.
                     </p>
@@ -54,7 +57,7 @@
                     <hr>
 
                     <p
-                        class="pb-3 pt-5 font-sign text-transparent bg-gradient-to-br bg-clip-text from-red-700 to-blue-700">
+                        class="pb-3 pt-5 font-sign text-transparent bg-gradient-to-br bg-clip-text from-red-700 to-blue-700 dark:from-red-50 dark:to-blue-50">
                         Adjust the intensity of each sound to find the perfect balance, seamlessly blend multiple
                         soundscapes to create your own personalized sanctuary.
                     </p>
@@ -67,13 +70,14 @@
                         <div class="relative group">
 
                             <div
-                                class="absolute -bottom-3 rounded-lg bg-yellow-700 filter blur-2xl w-40 h-10 opacity-30">
+                                class="absolute -bottom-3 rounded-lg bg-yellow-700 dark:bg-yellow-50 filter blur-2xl w-40 h-10 opacity-30">
                             </div>
 
                             <div
                                 class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-xl">
-                                <table class="w-full text-sm text-left text-gray-500">
-                                    <thead class="text-xs text-gray-700 bg-gradient-to-r from-violet-200 to-pink-200">
+                                <table class="w-full text-sm text-left">
+                                    <thead
+                                        class="text-xs text-gray-700 bg-gradient-to-r from-violet-200 to-pink-200 dark:text-gray-50 dark:bg-gradient-to-lr dark:from-violet-600 dark:to-pink-600">
                                         <tr>
                                             <th scope="col" class="px-6 py-3">
                                                 <p class="font-mono font-extrabold">sound</p>
@@ -88,10 +92,10 @@
                                     </thead>
                                     <tbody>
                                         
-                                        <tr class="bg-white ">
+                                        <tr class="bg-white dark:bg-neutral-900">
                                             <th scope="row" class="px-6 py-4 whitespace-nowrap">
                                                 <span
-                                                    class="font-sign text-slate-900 font-normal">Heavy Storm Rain</span>
+                                                    class="font-sign text-slate-900 dark:text-white font-bold">Heavy Storm Rain</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="heavy-storm-rain-loop_audio"
@@ -106,18 +110,18 @@
                                             <td class="px-6 py-4">
                                                 <button id="heavy-storm-rain-loop_audio_button"
                                                     onClick="audioTogglePlay('heavy-storm-rain-loop')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
                                                     <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                                        class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>
                                                 </button>
                                             </td>
                                         </tr>
 
                                         
-                                        <tr class="bg-white ">
+                                        <tr class="bg-white dark:bg-neutral-900">
                                             <th scope="row" class="px-6 py-4 whitespace-nowrap">
                                                 <span
-                                                    class="font-sign text-slate-900 font-normal">Light Rain Ambiance</span>
+                                                    class="font-sign text-slate-900 dark:text-white font-bold">Light Rain Ambiance</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="light-rain-loop_audio"
@@ -132,18 +136,18 @@
                                             <td class="px-6 py-4">
                                                 <button id="light-rain-loop_audio_button"
                                                     onClick="audioTogglePlay('light-rain-loop')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
                                                     <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                                        class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>
                                                 </button>
                                             </td>
                                         </tr>
 
                                         
-                                        <tr class="bg-white ">
+                                        <tr class="bg-white dark:bg-neutral-900">
                                             <th scope="row" class="px-6 py-4 whitespace-nowrap">
                                                 <span
-                                                    class="font-sign text-slate-900 font-normal">GTA V Ambiance Music</span>
+                                                    class="font-sign text-slate-900 dark:text-white font-bold">GTA V Ambiance Music</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="gta5pause_audio"
@@ -158,18 +162,18 @@
                                             <td class="px-6 py-4">
                                                 <button id="gta5pause_audio_button"
                                                     onClick="audioTogglePlay('gta5pause')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
                                                     <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                                        class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>
                                                 </button>
                                             </td>
                                         </tr>
 
                                         
-                                        <tr class="bg-white ">
+                                        <tr class="bg-white dark:bg-neutral-900">
                                             <th scope="row" class="px-6 py-4 whitespace-nowrap">
                                                 <span
-                                                    class="font-sign text-slate-900 font-normal">Big Thunder with Rain</span>
+                                                    class="font-sign text-slate-900 dark:text-white font-bold">Big Thunder with Rain</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="big-thunder-with-rain_audio"
@@ -184,18 +188,18 @@
                                             <td class="px-6 py-4">
                                                 <button id="big-thunder-with-rain_audio_button"
                                                     onClick="audioTogglePlay('big-thunder-with-rain')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
                                                     <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                                        class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>
                                                 </button>
                                             </td>
                                         </tr>
 
                                         
-                                        <tr class="bg-white ">
+                                        <tr class="bg-white dark:bg-neutral-900">
                                             <th scope="row" class="px-6 py-4 whitespace-nowrap">
                                                 <span
-                                                    class="font-sign text-slate-900 font-normal">Heavy Rain on Car Glass Interior</span>
+                                                    class="font-sign text-slate-900 dark:text-white font-bold">Heavy Rain on Car Glass Interior</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="heavy-rain-on-car-glass-interior_audio"
@@ -210,18 +214,18 @@
                                             <td class="px-6 py-4">
                                                 <button id="heavy-rain-on-car-glass-interior_audio_button"
                                                     onClick="audioTogglePlay('heavy-rain-on-car-glass-interior')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
                                                     <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                                        class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>
                                                 </button>
                                             </td>
                                         </tr>
 
                                         
-                                        <tr class="bg-white ">
+                                        <tr class="bg-white dark:bg-neutral-900">
                                             <th scope="row" class="px-6 py-4 whitespace-nowrap">
                                                 <span
-                                                    class="font-sign text-slate-900 font-normal">Rain on Leaves</span>
+                                                    class="font-sign text-slate-900 dark:text-white font-bold">Rain on Leaves</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="rain-on-leaves_audio"
@@ -236,18 +240,18 @@
                                             <td class="px-6 py-4">
                                                 <button id="rain-on-leaves_audio_button"
                                                     onClick="audioTogglePlay('rain-on-leaves')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
                                                     <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                                        class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>
                                                 </button>
                                             </td>
                                         </tr>
 
                                         
-                                        <tr class="bg-white ">
+                                        <tr class="bg-white dark:bg-neutral-900">
                                             <th scope="row" class="px-6 py-4 whitespace-nowrap">
                                                 <span
-                                                    class="font-sign text-slate-900 font-normal">Abusive Recording</span>
+                                                    class="font-sign text-slate-900 dark:text-white font-bold">Abusive Recording</span>
                                             </th>
                                             <td class="px-6 py-4">
                                                 <audio id="abusiverecording_audio"
@@ -262,9 +266,9 @@
                                             <td class="px-6 py-4">
                                                 <button id="abusiverecording_audio_button"
                                                     onClick="audioTogglePlay('abusiverecording')"
-                                                    class="transition-all duration-700 relative px-7 py-2 bg-white rounded-lg shadow hover:shadow-2xl flex items-center">
+                                                    class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
                                                     <span
-                                                        class="font-mono font-bold text-blue-700 hover:text-blue-900 transition duration-200">PLAY</span>
+                                                        class="font-mono font-bold text-blue-700 dark:text-white hover:text-blue-900 transition duration-200">PLAY</span>
                                                 </button>
                                             </td>
                                         </tr>
@@ -280,9 +284,12 @@
             </div>
         </div>
         <div class="relative lg:w-1/2">
-            <img src="./images/flowercrown.png" alt="Hero Image" class="object-scale-down h-300">
+            <img src="./images/flowercrown.png" alt="Hero Image" class="dark:invert h-300">
         </div>
     </section>
+
+    <br class="text-red-500">
+    <br class="text-red-300">
 
     <!-- More Audio -->
 
@@ -821,7 +828,31 @@
         </div>
     </section>
 
+    <!-- dark mode button -->
+
+    <div class="fixed bottom-6 left-6">
+        <button id="darkModeToggle"
+            class="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-xl transition duration-400 text-black dark:text-white">
+            <svg id="darkicon" class="h-6 w-6 dark:invert" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="ic_fluent_dark_theme_24_regular" fill="#212121" fill-rule="nonzero">
+                        <path
+                            d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z"
+                            id="🎨-Color">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </button>
+    </div>
+
     <script src="audio.js"></script>
+    <script>
+        document.getElementById('darkModeToggle').addEventListener('click', function () {
+            document.body.classList.toggle('dark');
+        });
+    </script>
 </body>
 
 </html>
