@@ -1,214 +1,60 @@
 {
     "main_audio": {
-        "heavy-storm-rain-loop": {
-            "id": "heavy-storm-rain-loop",
-            "name": "Heavy Storm Rain",
-            "audio_id": "heavy-storm-rain-loop_audio",
-            "src": "./audio/heavy-storm-rain-loop.wav",
-            "volume_input": "heavy-storm-rain-loop_volume_control",
-            "button_id": "heavy-storm-rain-loop_audio_button"
+        "WindyRainAndThunderSounds": {
+            "id": "WindyRainAndThunderSounds",
+            "name": "Windy Rain and Thunderstroms",
+            "audio_id": "WindyRainAndThunderSounds_audio",
+            "src": "./audio/longAudioFiles/WindyRainAndThunderSounds.mp3",
+            "volume_input": "WindyRainAndThunderSounds_volume_control",
+            "button_id": "WindyRainAndThunderSounds_audio_button"
         },
-        "light-rain-and-thunder-ambience": {
-            "id": "light-rain-loop",
-            "name": "Light Rain Ambiance",
-            "audio_id": "light-rain-loop_audio",
-            "src": "./audio/light-rain-loop.wav",
-            "volume_input": "light-rain-loop_volume_control",
-            "button_id": "light-rain-loop_audio_button"
+        "BirdsInForest": {
+            "id": "BirdsInForest",
+            "name": "Birds in Forest",
+            "audio_id": "BirdsInForest_audio",
+            "src": "./audio/longAudioFiles/BirdsInForest.mp3",
+            "volume_input": "BirdsInForest_volume_control",
+            "button_id": "BirdsInForest_audio_button"
         },
-        "gta-v-audio": {
-            "id": "gta5pause",
-            "name": "GTA V Ambiance Music",
-            "audio_id": "gta5pause_audio",
-            "src": "./audio/gta5pause.mp3",
-            "volume_input": "gta5pause_volume_control",
-            "button_id": "gta5pause_audio_button"
+        "GentleWaveinTropicalForest": {
+            "id": "GentleWaveinTropicalForest",
+            "name": "Gentle Wave in Tropical Forest",
+            "audio_id": "GentleWaveinTropicalForest_audio",
+            "src": "./audio/longAudioFiles/GentleWaveinTropicalForest.mp3",
+            "volume_input": "GentleWaveinTropicalForest_volume_control",
+            "button_id": "GentleWaveinTropicalForest_audio_button"
         },
-        "big-thunder-with-rain": {
-            "id": "big-thunder-with-rain",
-            "name": "Big Thunder with Rain",
-            "audio_id": "big-thunder-with-rain_audio",
-            "src": "./audio/big-thunder-with-rain.wav",
-            "volume_input": "big-thunder-with-rain_volume_control",
-            "button_id": "big-thunder-with-rain_audio_button"
+        "TropicalBeachOceanWaves": {
+            "id": "TropicalBeachOceanWaves",
+            "name": "Tropical Beach Ocean Waves",
+            "audio_id": "TropicalBeachOceanWaves_audio",
+            "src": "./audio/longAudioFiles/TropicalBeachOceanWaves.mp3",
+            "volume_input": "TropicalBeachOceanWaves_volume_control",
+            "button_id": "TropicalBeachOceanWaves_audio_button"
         },
-        "heavy-rain-on-car-glass-interior": {
-            "id": "heavy-rain-on-car-glass-interior",
-            "name": "Heavy Rain on Car Glass Interior",
-            "audio_id": "heavy-rain-on-car-glass-interior_audio",
-            "src": "./audio/heavy-rain-on-car-glass-interior.wav",
-            "volume_input": "heavy-rain-on-car-glass-interior_volume_control",
-            "button_id": "heavy-rain-on-car-glass-interior_audio_button"
+        "MechanicalKeyboardTypingASMR": {
+            "id": "MechanicalKeyboardTypingASMR",
+            "name": "Mechanical Keyboard Typing ASMR",
+            "audio_id": "MechanicalKeyboardTypingASMR_audio",
+            "src": "./audio/longAudioFiles/MechanicalKeyboardTypingASMR.mp3",
+            "volume_input": "MechanicalKeyboardTypingASMR_volume_control",
+            "button_id": "MechanicalKeyboardTypingASMR_audio_button"
         },
-        "rain-on-leaves": {
-            "id": "rain-on-leaves",
-            "name": "Rain on Leaves",
-            "audio_id": "rain-on-leaves_audio",
-            "src": "./audio/rain-on-leaves.mp3",
-            "volume_input": "rain-on-leaves_volume_control",
-            "button_id": "rain-on-leaves_audio_button"
+        "OfficeAmbiance": {
+            "id": "OfficeAmbiance",
+            "name": "Office Ambiance",
+            "audio_id": "OfficeAmbiance_audio",
+            "src": "./audio/longAudioFiles/OfficeAmbiance.mp3",
+            "volume_input": "OfficeAmbiance_volume_control",
+            "button_id": "OfficeAmbiance_audio_button"
         },
-        "abusiverecording": {
-            "id": "abusiverecording",
-            "name": "Abusive Recording",
-            "audio_id": "abusiverecording_audio",
-            "src": "./audio/abusiverecording.mp3",
-            "volume_input": "abusiverecording_volume_control",
-            "button_id": "abusiverecording_audio_button"
-        }
-    },
-    "more_audio": {
-        "Interior Ambiance": {
-            "interior": {
-                "id": "interior",
-                "name": "Interior Ambiance",
-                "audio_id": "interior_audio",
-                "src": "./audio/interior.mp3",
-                "volume_input": "interior_volume_control",
-                "button_id": "interior_audio_button"
-            },
-            "office-ambience": {
-                "id": "office-ambience",
-                "name": "Office Ambience",
-                "audio_id": "office-ambience_audio",
-                "src": "./audio/office-ambience.wav",
-                "volume_input": "office-ambience_volume_control",
-                "button_id": "office-ambience_audio_button"
-            },
-            "summer-night-crickets-loop": {
-                "id": "summer-night-crickets-loop",
-                "name": "Summer Night Crickets",
-                "audio_id": "summer-night-crickets-loop_audio",
-                "src": "./audio/summer-night-crickets-loop.wav",
-                "volume_input": "summer-night-crickets-loop_volume_control",
-                "button_id": "summer-night-crickets-loop_audio_button"
-            }
-        },
-        "Transport Systems": {
-            "airplane": {
-                "id": "airplane",
-                "name": "Airplane",
-                "audio_id": "airplane_audio",
-                "src": "./audio/transport/airplane.mp3",
-                "volume_input": "airplane_volume_control",
-                "button_id": "airplane_audio_button"
-            },
-            "inside-a-train": {
-                "id": "inside-a-train",
-                "name": "Inside a Train",
-                "audio_id": "inside-a-train_audio",
-                "src": "./audio/transport/inside-a-train.mp3",
-                "volume_input": "inside-a-train_volume_control",
-                "button_id": "inside-a-train_audio_button"
-            },
-            "rowing-boat": {
-                "id": "rowing-boat",
-                "name": "Rowing Boat",
-                "audio_id": "rowing-boat_audio",
-                "src": "./audio/transport/rowing-boat.mp3",
-                "volume_input": "rowing-boat_volume_control",
-                "button_id": "rowing-boat_audio_button"
-            },
-            "sailboat": {
-                "id": "sailboat",
-                "name": "Sailboat",
-                "audio_id": "sailboat_audio",
-                "src": "./audio/transport/sailboat.mp3",
-                "volume_input": "sailboat_volume_control",
-                "button_id": "sailboat_audio_button"
-            },
-            "submarine": {
-                "id": "submarine",
-                "name": "Submarine",
-                "audio_id": "submarine_audio",
-                "src": "./audio/transport/submarine.mp3",
-                "volume_input": "submarine_volume_control",
-                "button_id": "submarine_audio_button"
-            },
-            "train": {
-                "id": "train",
-                "name": "Train",
-                "audio_id": "train_audio",
-                "src": "./audio/transport/train.mp3",
-                "volume_input": "train_volume_control",
-                "button_id": "train_audio_button"
-            },
-            "ambulance-siren": {
-                "id": "ambulance-siren",
-                "name": "Ambulance Siren",
-                "audio_id": "ambulance-siren_audio",
-                "src": "./audio/urban/ambulance-siren.mp3",
-                "volume_input": "ambulance-siren_volume_control",
-                "button_id": "ambulance-siren_audio_button"
-            }
-        },
-        "Nature": {
-            "train-station-depart-ambience": {
-                "id": "train-station-depart-ambience",
-                "name": "Train Station Ambience",
-                "audio_id": "train-station-depart-ambience_audio",
-                "src": "./audio/train-station-depart-ambience.wav",
-                "volume_input": "train-station-depart-ambience_volume_control",
-                "button_id": "train-station-depart-ambience_audio_button"
-            },
-            "urban-construction-site-ambiance": {
-                "id": "urban-construction-site-ambiance",
-                "name": "Urban Construction Site Ambiance",
-                "audio_id": "urban-construction-site-ambiance_audio",
-                "src": "./audio/urban-construction-site-ambiance.wav",
-                "volume_input": "urban-construction-site-ambiance_volume_control",
-                "button_id": "urban-construction-site-ambiance_audio_button"
-            }
-        },
-        "Urban": {
-            "busy-street": {
-                "id": "busy-street",
-                "name": "Busy Street",
-                "audio_id": "busy-street_audio",
-                "src": "./audio/urban/busy-street.mp3",
-                "volume_input": "busy-street_volume_control",
-                "button_id": "busy-street_audio_button"
-            },
-            "crowd": {
-                "id": "crowd",
-                "name": "Crowd",
-                "audio_id": "crowd_audio",
-                "src": "./audio/urban/crowd.mp3",
-                "volume_input": "crowd_volume_control",
-                "button_id": "crowd_audio_button"
-            },
-            "fireworks": {
-                "id": "fireworks",
-                "name": "Fireworks",
-                "audio_id": "fireworks_audio",
-                "src": "./audio/urban/fireworks.mp3",
-                "volume_input": "fireworks_volume_control",
-                "button_id": "fireworks_audio_button"
-            },
-            "highway": {
-                "id": "highway",
-                "name": "Highway",
-                "audio_id": "highway_audio",
-                "src": "./audio/urban/highway.mp3",
-                "volume_input": "highway_volume_control",
-                "button_id": "highway_audio_button"
-            },
-            "road": {
-                "id": "road",
-                "name": "Road",
-                "audio_id": "road_audio",
-                "src": "./audio/urban/road.mp3",
-                "volume_input": "road_volume_control",
-                "button_id": "road_audio_button"
-            },
-            "traffic": {
-                "id": "traffic",
-                "name": "Traffic",
-                "audio_id": "traffic_audio",
-                "src": "./audio/urban/traffic.mp3",
-                "volume_input": "traffic_volume_control",
-                "button_id": "traffic_audio_button"
-            }
+        "TrainRideAmbiance": {
+            "id": "TrainRideAmbiance",
+            "name": "Train Ride Ambiance",
+            "audio_id": "TrainRideAmbiance_audio",
+            "src": "./audio/longAudioFiles/TrainRideAmbiance.mp3",
+            "volume_input": "TrainRideAmbiance_volume_control",
+            "button_id": "TrainRideAmbiance_audio_button"
         }
     }
 }

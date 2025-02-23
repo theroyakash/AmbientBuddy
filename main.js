@@ -1,8 +1,9 @@
-const {BrowserWindow, app} = require('electron');
-const path = require('path');
+const {BrowserWindow, app } = require('electron');
+
+let mainWindow;
 
 const createMainWindow = () => {
-    const window = new BrowserWindow({
+    mainWindow = new BrowserWindow({
         title: "AmbientBuddy",
         width: 1400,
         height: 900,
@@ -11,15 +12,13 @@ const createMainWindow = () => {
         }
     })
 
-    window.loadFile("index.html");
+    mainWindow.loadFile("index.html");
 }
 
 app.whenReady().then(() => {
     createMainWindow();
 });
 
-// app.on('window-all-closed', () => {
-//     if (process.platform !== 'darwin') {
-//         app.quit();
-//     }
-// })
+app.on('window-all-closed', () => {
+    app.quit();
+})
