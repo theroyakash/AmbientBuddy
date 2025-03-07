@@ -14,9 +14,6 @@ const createMainWindow = () => {
     })
 
     mainWindow.loadFile("index.html");
-    let data = storage.myData;
-    console.log(data);
-    storage.saveJsonData(data);
 }
 
 app.whenReady().then(() => {
