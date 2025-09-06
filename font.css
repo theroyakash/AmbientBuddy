@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: productsans;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+@font-face {
+    font-family: segoe;
+    src: url(segoeui-main.ttf);
+}
+
+@font-face {
+    font-family: sig;
+    src: url(Signifier.ttf);
+}
+
+@font-face {
+    font-family: sigbold;
+    src: url(SignifierBold.ttf);
+}
+
+@font-face {
+    font-family: productsans;
+    src: url(./public/fonts/prodsansreg.ttf);
+}
+
+div {
+    font-family: productsans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: productsans;
+    color: #444444;
+}
+
+p {
+    font-family: productsans;
+}
+
+small {
+    font-family: productsans;
+}

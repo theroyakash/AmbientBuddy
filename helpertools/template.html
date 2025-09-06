@@ -14,14 +14,15 @@
     <section class="w-full px-8 text-gray-700 bg-white body-font dark:text-gray-100 dark:bg-black">
         <div class="container relative flex flex-col items-center justify-center py-5 mx-auto max-w-7xl md:flex-row">
 
+            <p
+                class="items-center inline-block font-sans text-3xl font-extrabold text-center text-black no-underline bg-transparent cursor-pointer focus:no-underline">
+                <img class="w-20 h-20 invert-0" src="./images/MarshmallowCoffee.png">
+            </p>
+
             <div
                 class="absolute -bottom-3 rounded-full bg-gradient-to-b from-fuchsia-500 to-cyan-500 filter blur-3xl w-full h-full opacity-50">
             </div>
 
-            <a href="/"
-                class="items-center inline-block font-sans text-3xl font-extrabold text-center text-black no-underline bg-transparent cursor-pointer focus:no-underline">
-                <img class="w-20 h-20 invert-0" src="./images/MarshmallowCoffee.png">
-            </a>
         </div>
     </section>
 
@@ -32,6 +33,7 @@
                     class="font-mono font-extrabold tracking-tighter inline-block px-2 py-1 mb-5 text-gray-900 dark:text-white uppercase bg-gray-200 dark:bg-gray-500 rounded-lg shadow-2xl">
                     CURATED PLAYLIST
                 </p>
+
 
                 <div class="relative">
                     <div
@@ -129,126 +131,14 @@
         </div>
     </section>
 
-    <div class="text-red-500 bg-white dark:bg-black"></div>
-    <div class="text-red-300 bg-white dark:bg-black"></div>
-
-    <!-- More Audio -->
-<!-- 
-    <section class="py-20 bg-white dark:bg-black">
-        <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto tracking-tighter relative">
-                <h2
-                    class="font-garamond text-2xl font-bold leading-none text-black dark:text-white sm:text-3xl md:text-4xl">
-                    More Audio
-                </h2>
-                <div class="absolute -bottom-4 rounded-full bg-yellow-300 filter blur-3xl w-full h-full opacity-20">
-                </div>
-            </div>
-            <p
-                class="font-garamond max-w-md mx-auto mt-3 text-base text-gray-500 dark:text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Below are all the audio available in app, to request a specific audio track please contact us.
-            </p>
-        </div>
-
-        <br><br><br>
-
-        <div class="px-4 mx-auto text-center w-1/2 sm:px-6 lg:px-8 bg-white dark:bg-black">
-            <div class="grid gap-8 items-start text-center">
-                <div class="relative group">
-
-                    <div class="absolute -bottom-3 rounded-lg bg-yellow-700 filter blur-2xl w-40 h-10 opacity-10">
-                    </div>
-
-                    <div>
-                        <div
-                            class="absolute top-0 left-4 bg-gradient-to-r from-blue-500 to-indigo-800 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
-                        </div>
-                        <div
-                            class="absolute top-0 right-4 bg-indigo-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
-                        </div>
-                        <div
-                            class="absolute -bottom-8 left-20 bg-yellow-600 w-full h-full rounded-full mix-blend-multiply filter blur-2xl opacity-10">
-                        </div>
-                        <div
-                            class="relative overflow-x-auto shadow-md transition-all duration-700 hover:shadow-2xl rounded-xl">
-
-                            <table class="w-full text-sm text-left text-gray-500 dark:text-white">
-                                <thead
-                                    class="text-xs text-gray-700 bg-gradient-to-r from-red-200 to-indigo-200 dark:text-white dark:bg-gradient-to-r dark:from-red-500 dark:to-indigo-500">
-                                    <tr>
-                                        <th scope="col" class="px-6 py-3">
-                                            <p class="font-mono font-extrabold">sound</p>
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            <p class="font-mono font-extrabold">volume</p>
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            <p class="font-mono font-extrabold">play/pause</p>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {% for category in more_audio %}
-
-                                    <tr class="bg-white dark:bg-neutral-900">
-                                        <th scope="row" class="px-6 py-4" colspan="2"> <span
-                                                class="text-small font-mono inline-block px-2 tracking-wide font-bold text-white uppercase bg-gradient-to-r from-red-800 to-indigo-800 dark:from-red-100 dark:to-indigo-200 dark:text-emerald-700 rounded shadow-xl">{{
-                                                category }} </span></th>
-                                        <td class=""></td>
-                                    </tr>
-
-                                    {% for key in more_audio[category] %}
-                                    <tr class="bg-white dark:bg-neutral-900">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-sign text-gray-900 dark:text-white whitespace-nowrap">
-                                            {{more_audio[category][key]["name"]}}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            <audio id="{{more_audio[category][key]['audio_id']}}"
-                                                src="{{more_audio[category][key]['src']}}" preload="auto"></audio>
-
-                                            <input min="1" max="100" value="100" class="slider" type="range"
-                                                id="{{more_audio[category][key]['volume_input']}}"></input>
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            <button id="{{more_audio[category][key]['button_id']}}"
-                                                onClick="audioTogglePlay('{{more_audio[category][key]['id']}}')"
-                                                class="transition-all duration-700 relative px-7 py-2 bg-white dark:bg-black rounded-lg shadow hover:shadow-2xl flex items-center">
-                                                <span
-                                                    class="font-mono font-bold text-blue-700 dark:text-white transition duration-200">PLAY</span>
-                                            </button>
-                                        </td>
-                                    </tr>
-
-                                    {% endfor %}
-
-                                    {% endfor%}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- dark mode button -->
 
-    <div class="fixed bottom-6 left-6">
-        <button id="darkModeToggle"
-            class="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-xl transition duration-400 text-black dark:text-white">
-            <svg id="darkicon" class="h-6 w-6 dark:invert" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="ic_fluent_dark_theme_24_regular" fill="#212121" fill-rule="nonzero">
-                        <path
-                            d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z"
-                            id="🎨-Color">
-                        </path>
-                    </g>
-                </g>
-            </svg>
+    <div class="fixed bottom-10 right-10">
+        <button id="darkModeToggle" class="px-4 py-2 rounded-md transition duration-200 bg-blue-600 text-white font-medium shadow-md 
+            hover:bg-blue-700 hover:shadow-2xl focus:outline-none focus:ring-2 
+            focus:ring-blue-400 active:scale-95">
+            <span> Change Theme
+            </span>
         </button>
     </div>
 
@@ -258,6 +148,70 @@
             document.body.classList.toggle('dark');
         });
     </script>
+
+    <style>
+        .card2 {
+            position: relative;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+
+        @property --angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        .card2::after,
+        .card2::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: conic-gradient(from var(--angle), #FEA400, #FC713A, #FC264F, #EB5785, #A75DF6, #1B9AF9, #FEBA55);
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            z-index: -1;
+            padding: 3px;
+            border-radius: 20px;
+            animation: 4s spin linear infinite;
+        }
+
+        .card2::before {
+            filter: blur(70px);
+        }
+
+        @keyframes spin {
+            from {
+                --angle: 0deg;
+            }
+
+            to {
+                --angle: 360deg;
+            }
+        }
+
+        .autoBlur {
+            animation: autoBLurAnimation both;
+            animation-timeline: view();
+        }
+
+        @keyframes autoBLurAnimation {
+            0% {
+                filter: blur(40px);
+            }
+
+            20% {
+                filter: blur(20px);
+            }
+
+            45%,
+            55% {
+                filter: blur(0px);
+            }
+        }
+    </style>
 </body>
 
 </html>

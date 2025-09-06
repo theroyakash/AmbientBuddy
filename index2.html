@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./public/build/main.css">
+
+    <!-- Font Re-write -->
+    <link rel="stylesheet" type="text/css" href="./font.css">
+
+    <!-- CSS for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap JS -->
+    <script src="./public/build/app.js"></script>
+    <script src="audio.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AmbientBuddy</title>
+    <meta name="description" content="An app for managing personal wealth">
+
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid">
+                <p class="badge bg-primary navbar-brand mr-4 fw-bolder font-monospace" href="/">AMBIENTBUDDY</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+        <div class="card2 row">
+            <div class="col-md-8 mt-4">
+                <h2 class="font-monospace shadow-lg rounded-3 badge bg-danger">CURATED PLAYLIST</h2>
+                <br>
+                <h1 class="font-extrabold">AmbientBuddy</h1>
+                <br>
+                <div class="table-responsive rounded-3">
+                    <table class="table table-bordered">
+                        <caption>
+                            Immerse yourself in a world of calm and tranquility, The ultimate ambient sound app designed
+                            to
+                            transport you to a realm of pure relaxation.
+                            Adjust the intensity of each sound to find the perfect balance, seamlessly blend multiple
+                            soundscapes to create your own personalized sanctuary.
+                        </caption>
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Sound</th>
+                                <th scope="col">Volume</th>
+                                <th scope="col">Play/Pause</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>Windy Rain and Thunderstroms</td>
+                                <td>
+                                    <audio id="WindyRainAndThunderSounds_audio" src="./audio/longAudioFiles/WindyRainAndThunderSounds.mp3" loop
+                                        preload="auto"></audio>
+
+                                    <input min="1" max="100" value="100" class="slider" type="range"
+                                        id="WindyRainAndThunderSounds_volume_control"></input>
+                                </td>
+                                <td>
+                                    <button id="WindyRainAndThunderSounds_audio_button"
+                                        onClick="audioTogglePlayBootstrap('WindyRainAndThunderSounds')" type="submit"
+                                        class="font-monospace shadow-lg rounded-3 badge bg-success"><span>PLAY</span></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Birds in Forest</td>
+                                <td>
+                                    <audio id="BirdsInForest_audio" src="./audio/longAudioFiles/BirdsInForest.mp3" loop
+                                        preload="auto"></audio>
+
+                                    <input min="1" max="100" value="100" class="slider" type="range"
+                                        id="BirdsInForest_volume_control"></input>
+                                </td>
+                                <td>
+                                    <button id="BirdsInForest_audio_button"
+                                        onClick="audioTogglePlayBootstrap('BirdsInForest')" type="submit"
+                                        class="font-monospace shadow-lg rounded-3 badge bg-success"><span>PLAY</span></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Gentle Wave in Tropical Forest</td>
+                                <td>
+                                    <audio id="GentleWaveinTropicalForest_audio" src="./audio/longAudioFiles/GentleWaveinTropicalForest.mp3" loop
+                                        preload="auto"></audio>
+
+                                    <input min="1" max="100" value="100" class="slider" type="range"
+                                        id="GentleWaveinTropicalForest_volume_control"></input>
+                                </td>
+                                <td>
+                                    <button id="GentleWaveinTropicalForest_audio_button"
+                                        onClick="audioTogglePlayBootstrap('GentleWaveinTropicalForest')" type="submit"
+                                        class="font-monospace shadow-lg rounded-3 badge bg-success"><span>PLAY</span></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Tropical Beach Ocean Waves</td>
+                                <td>
+                                    <audio id="TropicalBeachOceanWaves_audio" src="./audio/longAudioFiles/TropicalBeachOceanWaves.mp3" loop
+                                        preload="auto"></audio>
+
+                                    <input min="1" max="100" value="100" class="slider" type="range"
+                                        id="TropicalBeachOceanWaves_volume_control"></input>
+                                </td>
+                                <td>
+                                    <button id="TropicalBeachOceanWaves_audio_button"
+                                        onClick="audioTogglePlayBootstrap('TropicalBeachOceanWaves')" type="submit"
+                                        class="font-monospace shadow-lg rounded-3 badge bg-success"><span>PLAY</span></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Mechanical Keyboard Typing ASMR</td>
+                                <td>
+                                    <audio id="MechanicalKeyboardTypingASMR_audio" src="./audio/longAudioFiles/MechanicalKeyboardTypingASMR.mp3" loop
+                                        preload="auto"></audio>
+
+                                    <input min="1" max="100" value="100" class="slider" type="range"
+                                        id="MechanicalKeyboardTypingASMR_volume_control"></input>
+                                </td>
+                                <td>
+                                    <button id="MechanicalKeyboardTypingASMR_audio_button"
+                                        onClick="audioTogglePlayBootstrap('MechanicalKeyboardTypingASMR')" type="submit"
+                                        class="font-monospace shadow-lg rounded-3 badge bg-success"><span>PLAY</span></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Office Ambiance</td>
+                                <td>
+                                    <audio id="OfficeAmbiance_audio" src="./audio/longAudioFiles/OfficeAmbiance.mp3" loop
+                                        preload="auto"></audio>
+
+                                    <input min="1" max="100" value="100" class="slider" type="range"
+                                        id="OfficeAmbiance_volume_control"></input>
+                                </td>
+                                <td>
+                                    <button id="OfficeAmbiance_audio_button"
+                                        onClick="audioTogglePlayBootstrap('OfficeAmbiance')" type="submit"
+                                        class="font-monospace shadow-lg rounded-3 badge bg-success"><span>PLAY</span></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Train Ride Ambiance</td>
+                                <td>
+                                    <audio id="TrainRideAmbiance_audio" src="./audio/longAudioFiles/TrainRideAmbiance.mp3" loop
+                                        preload="auto"></audio>
+
+                                    <input min="1" max="100" value="100" class="slider" type="range"
+                                        id="TrainRideAmbiance_volume_control"></input>
+                                </td>
+                                <td>
+                                    <button id="TrainRideAmbiance_audio_button"
+                                        onClick="audioTogglePlayBootstrap('TrainRideAmbiance')" type="submit"
+                                        class="font-monospace shadow-lg rounded-3 badge bg-success"><span>PLAY</span></button>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4 mt-4">
+                <div class="content-section">
+                    <h3>Navigation</h3>
+                    <p class='text-muted'>Important Links.</p>
+                    <ul class="list-group">
+                        <li class="list-group-item active fw-bolder font-monospace" aria-current="true">Contacts</li>
+                        <a href="https://www.theroyakash.com" class="list-group-item list-group-item-action">Contact
+                            Developer</a>
+                    </ul>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <br><br>
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <p class="m-0 text-center">Copyright &copy; theroyakash 2024</p>
+            <p class="text-center text-muted"><small>Built for local usage only. Do not deploy.</small></p>
+        </div>
+    </footer>
+
+    <style>
+        .card2 {
+            position: relative;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+
+        @property --angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        .card2::after,
+        .card2::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: conic-gradient(from var(--angle), #FEA400, #FC713A, #FC264F, #EB5785, #A75DF6, #1B9AF9, #FEBA55);
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            z-index: -1;
+            padding: 3px;
+            border-radius: 20px;
+            animation: 4s spin linear infinite;
+        }
+
+        .card2::before {
+            filter: blur(70px);
+        }
+
+        @keyframes spin {
+            from {
+                --angle: 0deg;
+            }
+
+            to {
+                --angle: 360deg;
+            }
+        }
+
+        .autoBlur {
+            animation: autoBLurAnimation both;
+            animation-timeline: view();
+        }
+
+        @keyframes autoBLurAnimation {
+            0% {
+                filter: blur(40px);
+            }
+
+            20% {
+                filter: blur(20px);
+            }
+
+            45%,
+            55% {
+                filter: blur(0px);
+            }
+        }
+    </style>
+</body>
+
+</html>
